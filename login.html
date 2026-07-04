@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Booking Loby PS5</title>
+
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container{
+            width: 360px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .logo{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img{
+            width: 120px;
+        }
+
+        h2{
+            text-align: center;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .subtitle{
+            text-align: center;
+            color: gray;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .input-group{
+            margin-bottom: 20px;
+        }
+
+        label{
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        input{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+
+        .forgot{
+            text-align: right;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+
+        .forgot a{
+            text-decoration: none;
+            color: #0066ff;
+            font-size: 13px;
+        }
+
+        .btn-login{
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #0066ff;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn-login:hover{
+            background: #0052cc;
+        }
+
+        .register{
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .register a{
+            color: #0066ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="logo">
+            <img src="logo-ps5.png/logo ps5.png.png">
+        </div>
+
+        <h2>Booking Loby PS5</h2>
+        <p class="subtitle">
+            Pesan waktu bermainmu dengan mudah dan cepat.
+        </p>
+
+        <form id="loginForm">
+
+    <div class="input-group">
+        <label>Email atau Nomor Telepon</label>
+        <input type="text"
+               id="email"
+               placeholder="Masukkan email atau nomor telepon">
+    </div>
+
+    <div class="input-group">
+        <label>Kata Sandi</label>
+        <input type="password"
+               id="password"
+               placeholder="Masukkan kata sandi">
+    </div>
+
+           
+
+           <button type="button" class="btn-login" onclick="login()">
+    Masuk
+</button>
+
+            <div class="register">
+                Belum punya akun?
+               <a href="register.html">Daftar sekarang</a>
+            </div>
+
+        </form>
+
+    </div>
+<script>
+function login() {
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+
+    if (email === "") {
+        alert("Email atau Nomor Telepon harus diisi!");
+        return;
+    }
+
+    if (password === "") {
+        alert("Kata sandi harus diisi!");
+        return;
+    }
+
+    // Login Admin
+    if (email === "admin" && password === "admin123") {
+        window.location.href = "admin.html";
+    }
+
+    // Login User
+    else {
+        window.location.href = "dhasboard.html";
+    }
+}
+</script>
+</script>
+</body>
+</html>

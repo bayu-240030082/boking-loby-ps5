@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Akun PS5</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+        }
+
+        .container{
+            width:360px;
+            background:white;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .logo{
+            text-align:center;
+            margin-bottom:20px;
+        }
+
+        .logo img{
+            width:120px;
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:10px;
+        }
+
+        .subtitle{
+            text-align:center;
+            color:gray;
+            font-size:14px;
+            margin-bottom:25px;
+        }
+
+        .input-group{
+            margin-bottom:18px;
+        }
+
+        label{
+            display:block;
+            margin-bottom:8px;
+            font-weight:500;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:10px;
+        }
+
+        .btn-register{
+            width:100%;
+            padding:12px;
+            border:none;
+            border-radius:10px;
+            background:#0066ff;
+            color:white;
+            font-size:16px;
+            font-weight:600;
+            cursor:pointer;
+        }
+
+        .btn-register:hover{
+            background:#0052cc;
+        }
+
+        .login-link{
+            text-align:center;
+            margin-top:20px;
+        }
+
+        .login-link a{
+            text-decoration:none;
+            color:#0066ff;
+            font-weight:600;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        <img src="logo-ps5.png/logo ps5.png.png">
+    </div>
+
+    <h2>Buat Akun Baru</h2>
+
+    <p class="subtitle">
+        Daftar untuk mulai booking loby PS5.
+    </p>
+
+    <form>
+
+        <div class="input-group">
+    <label>Nama email</label>
+    <input type="text"
+           id="nama"
+           placeholder="Masukkan nama pengguna">
+</div>
+
+<div class="input-group">
+    <label>Kata Sandi</label>
+    <input type="password"
+           id="password"
+           placeholder="Masukkan kata sandi">
+</div>
+
+<div class="input-group">
+    <label>Konfirmasi Kata Sandi</label>
+    <input type="password"
+           id="konfirmasi"
+           placeholder="Ulangi kata sandi">
+</div>
+
+      <button type="button" class="btn-register" onclick="daftar()">
+    Daftar
+</button>
+
+    </form>
+
+    <div class="login-link">
+        Sudah punya akun?
+        <a href="login.html">Masuk</a>
+    </div>
+
+</div>
+<script>
+function daftar() {
+    let nama = document.getElementById("nama").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let konfirmasi = document.getElementById("konfirmasi").value.trim();
+
+    if(nama === ""){
+        alert("Nama email harus di isi!");
+        return;
+    }
+
+    if(password === ""){
+        alert("Kata sandi harus diisi!");
+        return;
+    }
+
+  if(konfirmasi === ""){
+    alert("Konfirmasi kata sandi harus diisi!");
+    return;
+}
+
+    alert("Akun berhasil dibuat!");
+
+    // Kembali ke halaman login
+    window.location.href = "login.html";
+}
+</script>
+</body>
+</html>
